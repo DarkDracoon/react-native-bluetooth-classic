@@ -368,6 +368,15 @@ public class RNBluetoothClassicModule
   }
 
   /**
+   * Custom created method.
+   * Get self device address.
+   */
+  @ReactMethod
+  public String getSelfAddress(){
+    return android.provider.Settings.Secure.getString(mReactContext.getContentResolver(), "bluetooth_address");
+  }
+
+  /**
    * Attempt to discover unpaired devices.  Resolves when the BluetoothDiscoveryReceiver
    * returns.
    *
