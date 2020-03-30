@@ -563,6 +563,14 @@ public class RNBluetoothClassicModule
     }
   }
 
+  @ReactMethod
+  public void broadcastDevice(){
+    Intent discoverableIntent =
+      new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+    discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+    this.mReactContext.startActivity(discoverableIntent);
+  }
+
   /**
    * Cancel the listening request.  Returns gracefully with a null {@link BluetoothDevice} to be
    * managed, once the error handling gets a little bit of love, there will be a difference
