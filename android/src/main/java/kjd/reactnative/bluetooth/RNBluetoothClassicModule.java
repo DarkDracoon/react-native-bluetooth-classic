@@ -543,14 +543,6 @@ public class RNBluetoothClassicModule
     }
   }
 
-  @ReactMethod
-  public void askDiscoverability(){
-    Intent discoverableIntent =
-            new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-    discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-    this.mReactContext.startActivity(discoverableIntent);
-  }
-
   /**
    * Start listening for connections.
    *
