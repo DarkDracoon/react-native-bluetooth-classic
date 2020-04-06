@@ -120,4 +120,4 @@ class RNBluetoothClassic extends NativeEventEmitter {
 
 export const BTEvents = NativeModules.RNBluetoothClassic.BTEvents;
 export const BTCharsets = NativeModules.RNBluetoothClassic.BTCharsets;
-export default RNBluetoothClassic;
+export default new RNBluetoothClassic(NativeModules.RNBluetoothClassic);
