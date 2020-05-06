@@ -568,6 +568,7 @@ public class RNBluetoothClassicModule
     Intent discoverableIntent =
       new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
     discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+    discoverableIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     this.mReactContext.startActivity(discoverableIntent);
   }
 
